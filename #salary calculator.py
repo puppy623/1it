@@ -1,4 +1,4 @@
-#salary calculator
+#salary calculator v2
 
 salary = 1299.99
 tax = 0.13
