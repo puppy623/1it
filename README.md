@@ -1,2 +1,2 @@
-# 1it
+# 1IT Py
 my python journey
