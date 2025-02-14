@@ -113,7 +113,7 @@ def shop():
         if button_1.collidepoint((mx, my)):
             if click:
                 if cookie_count >= click_power_cost:
-                    click_power += 1
+                    click_power += click_power*1.2
                     cookie_count -= click_power_cost
                     click_power_cost = math.ceil(click_power_cost * 1.5)
                     buy_sound.play()
