@@ -28,7 +28,7 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 
 # variables
-cookie_count = 0
+cookie_count = int(0)
 click_power = 1
 click_power_cost = 10
 auto_clicker_cost = 100
@@ -113,7 +113,7 @@ def shop():
         if button_1.collidepoint((mx, my)):
             if click:
                 if cookie_count >= click_power_cost:
-                    click_power += click_power*1.2
+                    click_power += click_power*1
                     cookie_count -= click_power_cost
                     click_power_cost = math.ceil(click_power_cost * 1.5)
                     buy_sound.play()
@@ -178,8 +178,8 @@ def shop():
 def game():
     global cookie_count, click_power, auto_clicker_cost, auto_clicker_power, auto_clicker, auto_clicker_time, auto_clicker_time_cost, auto_clicker_time_max, auto_clicker_time_min
 
-    cookie_count = 0
-    click_power = 1
+    cookie_count = int(0)
+    click_power = int(1)
     click_power_cost = 10
     auto_clicker_cost = 100
     auto_clicker_power = 1
