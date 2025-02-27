@@ -12,7 +12,7 @@ from pygame.locals import *
 pygame.init()
 
 # display
-WIDTH, HEIGHT = 1920, 1080
+WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Cookie Clicker")
 
@@ -33,7 +33,7 @@ click_power = 1
 click_power_cost = 10
 auto_clicker_cost = 100
 auto_clicker_power = 1
-auto_clicker = 0
+auto_clicker = 1
 auto_clicker_time = 1
 auto_clicker_time_cost = 1000
 auto_clicker_time_max = 10
@@ -115,21 +115,21 @@ def shop():
                 if cookie_count >= click_power_cost:
                     click_power += click_power*1
                     cookie_count -= click_power_cost
-                    click_power_cost = math.ceil(click_power_cost * 1.5)
+                    click_power_cost = math.ceil(click_power_cost * 3)
                     buy_sound.play()
         if button_2.collidepoint((mx, my)):
             if click:
                 if cookie_count >= auto_clicker_cost:
-                    auto_clicker += 1
+                    auto_clicker *= 2
                     cookie_count -= auto_clicker_cost
-                    auto_clicker_cost = math.ceil(auto_clicker_cost * 1.5)
+                    auto_clicker_cost = math.ceil(auto_clicker_cost * 5)
                     buy_sound.play()
         if button_3.collidepoint((mx, my)):
             if click:
                 if cookie_count >= auto_clicker_time_cost:
                     auto_clicker_time += 1
                     cookie_count -= auto_clicker_time_cost
-                    auto_clicker_time_cost = math.ceil(auto_clicker_time_cost * 1.5)
+                    auto_clicker_time_cost = math.ceil(auto_clicker_time_cost * 100)
                     buy_sound.play()
         if button_4.collidepoint((mx, my)):
             if click:
@@ -183,7 +183,7 @@ def game():
     click_power_cost = 10
     auto_clicker_cost = 100
     auto_clicker_power = 1
-    auto_clicker = 0
+    auto_clicker = 1
     auto_clicker_time = 1
     auto_clicker_time_cost = 1000
     auto_clicker_time_max = 10
