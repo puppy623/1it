@@ -1,5 +1,6 @@
 # this is a clicker game made in python using the pygame library
 
+from statistics import mode
 import pygame
 import sys
 import os
@@ -64,6 +65,7 @@ def main_menu():
 
         button_1 = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 - 50, 200, 50)
         button_2 = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 50, 200, 50)
+        button_3 = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 150, 200, 50)
 
         if button_1.collidepoint((mx, my)):
             if click:
@@ -72,12 +74,16 @@ def main_menu():
             if click:
                 pygame.quit()
                 sys.exit()
-
+        if button_3.collidepoint((mx, my)):
+            if click:
+                pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
         pygame.draw.rect(screen, RED, button_1)
         pygame.draw.rect(screen, RED, button_2)
+        pygame.draw.rect(screen, RED, button_3)
 
         draw_text("Start", font, BLACK, WIDTH // 2 - 30, HEIGHT // 2 - 40)
         draw_text("Quit", font, BLACK, WIDTH // 2 - 30, HEIGHT // 2 + 60)
+        draw_text("Fullscreen", font, BLACK, WIDTH // 2 - 50, HEIGHT // 2 + 160)
 
         click = False
 
@@ -204,6 +210,7 @@ def game():
         cookie_rect = cookie_img.get_rect(center = (WIDTH // 2, HEIGHT // 2))
         screen.blit(cookie_img, cookie_rect)
 
+    
         button_1 = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 100, 200, 50)
         button_2 = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 150, 200, 50)
         button_3 = pygame.Rect(WIDTH // 2 - 100, HEIGHT // 2 + 200, 200, 50)
@@ -224,7 +231,7 @@ def game():
         pygame.draw.rect(screen, RED, button_2)
         pygame.draw.rect(screen, RED, button_3)
 
-        draw_text("Click", font, BLACK, WIDTH // 2 - 30, HEIGHT // 2 + 110)
+        draw_text("Click", font, BLACK, WIDTH // 2 - 30, HEIGHT // 2 + 160)
         draw_text("Auto Click", font, BLACK, WIDTH // 2 - 50, HEIGHT // 2 + 160)
         draw_text("Shop", font, BLACK, WIDTH // 2 - 30, HEIGHT // 2 + 210)
 
