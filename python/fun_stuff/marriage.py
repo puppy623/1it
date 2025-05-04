@@ -6,18 +6,18 @@ def show_message():
 
 def persistent_alert():
     root = tk.Tk()
-    root.withdraw()  # Hide the root window
+    root.withdraw() 
 
     while True:
         response = messagebox.askyesno("For Sandie <3", "Will you marry me?")
         
-        if response:  # if she says yes
+        if response: 
             messagebox.showinfo("For Sandie <3", "Yayyy! I love you so muchh!! <3")
             break
-        else:  # if she says no
+        else:
             messagebox.showinfo("For Sandie <3", "HEY! I told you not to say no!\n\n One more chance...")
             continue
-    root.destroy()  # Close the root window after the loop
+    root.destroy() 
 
 if __name__ == "__main__":
     persistent_alert()
