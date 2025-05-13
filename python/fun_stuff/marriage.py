@@ -1,9 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 
-def show_message():
-    messagebox.showinfo("For Sandie <3", "Will you marry me?")
-
 def persistent_alert():
     root = tk.Tk()
     root.withdraw() 

@@ -31,7 +31,7 @@ RED = (255, 0, 0)
 # variables
 cookie_count = int(0)
 click_power = 1
-click_power_cost = 10
+click_power_cost = 10  # This is used in the shop function
 auto_clicker_cost = 100
 auto_clicker_power = 1
 auto_clicker = 1
@@ -40,14 +40,18 @@ auto_clicker_time_cost = 1000
 auto_clicker_time_max = 10
 auto_clicker_time_min = 1
 
+# Get the absolute path to the assets folder
+BASE_DIR = os.path.dirname(__file__)
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+
 # images
-cookie_img = pygame.image.load(os.path.join("cookie_clicker_os_game", "assets", "cookie.png"))
+cookie_img = pygame.image.load(os.path.join(ASSETS_DIR, "cookie.png"))
 cookie_img = pygame.transform.scale(cookie_img, (200, 200))
 
 # sounds
-click_sound = pygame.mixer.Sound(os.path.join("cookie_clicker_os_game", "assets", "click.wav"))
+click_sound = pygame.mixer.Sound(os.path.join(ASSETS_DIR, "click.wav"))
 click_sound.set_volume(0.5)
-buy_sound = pygame.mixer.Sound(os.path.join("cookie_clicker_os_game", "assets", "buy.wav"))
+buy_sound = pygame.mixer.Sound(os.path.join(ASSETS_DIR, "buy.wav"))
 buy_sound.set_volume(0.5)
 
 # functions
