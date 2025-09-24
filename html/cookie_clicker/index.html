@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="background-color: blueviolet;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10.0">
+    <title>Cookie clicker</title>
+</head>
+<body>
+    <h1>Cookie clicker</h1>
+        <button id="cookie-button" style="background:none;border:none;padding:0;">
+            <img src="assets/cookie.png" alt="Cookie" style="width:100px;height:100px;cursor:pointer;">
+        </button>   
+    <p>Cookies: <span id="cookie-count">0</span></p>
+
+    <script>
+        let cookieCount = 0;
+
+        document.getElementById('cookie-button').addEventListener('click', () => {
+            cookieCount++;
+            document.getElementById('cookie-count').textContent = cookieCount;
+        });
+    </script>
+    
+</body>
+</html>
