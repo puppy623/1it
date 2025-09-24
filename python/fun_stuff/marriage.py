@@ -6,13 +6,13 @@ def persistent_alert():
     root.withdraw() 
 
     while True:
-        response = messagebox.askyesno("For Sandie <3", "Will you marry me?")
+        response = messagebox.askyesno("For Ita <3", "Will you marry me? (dont say no pls)")
         
         if response: 
-            messagebox.showinfo("For Sandie <3", "Yayyy! I love you so muchh!! <3")
+            messagebox.showinfo("For Ita <3", "Yayyy! I love you so muchh!! <3")
             break
         else:
-            messagebox.showinfo("For Sandie <3", "HEY! I told you not to say no!\n\n One more chance...")
+            messagebox.showinfo("For Ita <3", "HEY! I told you not to say no!\n\n One more chance...")
             continue
     root.destroy() 
 

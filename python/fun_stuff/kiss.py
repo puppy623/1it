@@ -6,13 +6,13 @@ def persistent_alert():
     root.withdraw() 
     
     while True:
-        response = messagebox.askyesno("For Sandie :3","You have received a sweet, sweet kiss!\nDo you accept?\n\n(If you say no, I will stab you.)")
+        response = messagebox.askyesno("For Ita :>","You have received a sweet, sweet kiss!\nDo you accept?\n\n(If you say no, I will stab you.)")
         
-        if response:  # if sandie love me
-            messagebox.showinfo("For Sandie :3","Yayyy! I love you so muchh!! <3")
+        if response:  # if ita love me
+            messagebox.showinfo("For Ita :>","Yayyy! I love you so muchh!! <3")
             break
-        else:  # if sandie dum dum
-            messagebox.showinfo("For Sandie :3","HEY! I told you not to say no!\n\n One more chance...")
+        else:  # if ita dum dum
+            messagebox.showinfo("For Ita :>","HEY! I told you not to say no!\n\n One more chance...")
             continue
 
 if __name__ == "__main__":
